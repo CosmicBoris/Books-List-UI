@@ -1,0 +1,37 @@
+<h2 mat-dialog-title>Book details</h2>
+
+<mat-dialog-content>
+  <div class="details-actions">
+    <mat-slide-toggle #toggle>Edit mode</mat-slide-toggle>
+    <button
+      mat-icon-button
+      matTooltip="Delete book"
+      matTooltipPosition="right"
+      aria-label="Delete book icon"
+      mat-dialog-close
+      (click)="deleteBook()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+@if (toggle.checked) {
+  <app-edit-book-form [book]="data.book" (valid)="formValid = $event"></app-edit-book-form>
+} @else {
+  <div class="details-grid">
+    <img class="details-grid__image" [src]="data.book.coverArtUrl" alt="Book Cover">
+
+    <h3 class="details-grid__title"><span>Title:</span> {{data.book.title}}</h3>
+    <h4 class="details-grid__author"><span>Author:</span> {{data.book.author}}</h4>
+    <h5 class="details-grid__year"><span>Year:</span> {{data.book.year}}</h5>
+
+    <p class="details-grid__description">{{data.book.description}}</p>
+  </div>
+}
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  @if (toggle.checked) {
+    <button mat-button [disabled]="!formValid" (click)="closeDialogPassingData()">Save</button>
+  }
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

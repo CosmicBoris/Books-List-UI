@@ -1,0 +1,33 @@
+.details-actions {
+  display: flex;
+  align-items: center;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img author"
+    "img year"
+    "img description";
+  grid-auto-rows: auto auto auto 1fr;
+  grid-auto-columns: 2fr 3fr;
+  gap: 1rem;
+
+  &__image {
+    grid-area: img;
+    max-width: 100%;
+  }
+
+  &_author {
+    grid-area: author;
+  }
+
+  &_year {
+    grid-area: year;
+  }
+
+  &_description {
+    grid-area: description;
+  }
+}

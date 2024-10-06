@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Add book</h2>
+
+<mat-dialog-content>
+  <app-edit-book-form (valid)="formValid = $event"></app-edit-book-form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [disabled]="!formValid" (click)="closeDialogPassingData()">Save</button>
+</mat-dialog-actions>

@@ -1,0 +1,30 @@
+<form [formGroup]="formGroup">
+  <mat-form-field class="example-full-width">
+    <mat-label>Cover art url</mat-label>
+    <input formControlName="coverArtUrl" matInput type="url" pattern="https://.*"/>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Title</mat-label>
+    <input formControlName="title" matInput/>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Author</mat-label>
+    <input formControlName="author" matInput/>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Year</mat-label>
+    <input formControlName="year" matInput/>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <textarea
+      formControlName="description"
+      rows="5"
+      matInput
+    ></textarea>
+  </mat-form-field>
+</form>

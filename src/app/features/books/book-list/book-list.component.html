@@ -1,0 +1,5 @@
+@for (book of store.books(); track book.id) {
+  <app-book-card [book]="book" [routerLink]="book.id.toString()" />
+}
+
+<router-outlet />

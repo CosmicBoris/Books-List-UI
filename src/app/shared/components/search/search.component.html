@@ -1,0 +1,22 @@
+<label>
+  <input
+    class="search-input"
+    placeholder="Search"
+    type="search"
+    name="search"
+    autocomplete="off"
+    autocapitalize="off"
+    spellcheck="false"
+    aria-label="Search through books"
+    [ngModel]="value"
+    (ngModelChange)="onInput($event)"
+  >
+</label>
+
+<figure (click)="isOpen.set(true)">
+  <mat-icon svgIcon="search_icon" class="search-icon"></mat-icon>
+</figure>
+
+<button class="close-btn" (click)="close()">
+  <mat-icon svgIcon="close_icon"></mat-icon>
+</button>
