@@ -10,6 +10,7 @@
     aria-label="Search through books"
     [ngModel]="value"
     (ngModelChange)="onInput($event)"
+    (keydown.escape)="close()"
   >
 </label>
 

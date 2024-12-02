@@ -3,7 +3,8 @@ $size: 3.6em;
 :host {
   position: relative;
   display: inline-block;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(5px);
   width: 0;
   min-width: $size;
   max-width: 390px;
@@ -18,7 +19,7 @@ $size: 3.6em;
     width: 100%;
     height: 100%;
     background: none;
-    color: #f6f6f6;
+    color: #1e1e1e;
     font-size: 1rem;
     outline: none;
     border: none;
@@ -51,8 +52,8 @@ $size: 3.6em;
     width: $size;
     height: $size;
     border-radius: calc($size / 2);
-    background: #171717;
-    color: #d9d9d9;
+    background: rgba(227, 227, 227, 0.65);
+    cursor: pointer;
     font-size: 1rem;
     padding: 0;
     margin: 0;
@@ -67,6 +68,7 @@ $size: 3.6em;
     position: absolute;
     top: 50%;
     left: 50%;
+    color: black;
     transform: translate(-50%, -50%);
   }
 }
