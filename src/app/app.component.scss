@@ -1,12 +1,14 @@
-:host, .main {
+:host {
   display: block;
-  height: 100%;
+  min-height: 100%;
+  background-color: #f6f5ee;
 }
 
 .main {
   width: 90%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 3vmin 0;
 }
 
 app-search,
