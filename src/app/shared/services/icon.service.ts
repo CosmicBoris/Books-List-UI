@@ -10,15 +10,8 @@ export class IconService {
   private readonly domSanitizer = inject(DomSanitizer);
 
   registerSvgIcons(): void {
-    [
-      'add_icon',
-      'delete_icon',
-      'edit_icon',
-      'search_icon',
-      'close_icon'
-    ].forEach(icon => this.matIconRegistry.addSvgIcon(
-      icon,
-      this.domSanitizer.bypassSecurityTrustResourceUrl(`${icon}.svg`)
-    ));
+    this.matIconRegistry.addSvgIconSet(
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/sprite.svg')
+    );
   }
 }
